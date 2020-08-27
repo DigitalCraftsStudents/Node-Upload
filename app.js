@@ -15,7 +15,7 @@ app.post("/image-uploaded", (req,res)=>{
       })
     .on('fileBegin', (name, file) => {
         //sets the path to save the image
-        file.path = __dirname + '/public/profile_images/' + new Date().getTime() + file.name
+        file.path = __dirname + '/public/profile_images/' + new Date().getTime() + '-' + file.name
     })
     .on('file', (name, file) => {
         //console.log('Uploaded file', name, file);
